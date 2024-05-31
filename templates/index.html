@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+    <head>
+        <title>Aman</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+    <h1>Send Email by using the Django Email Method</h1>
+        <main>
+
+            <form action="{% url 'thank' %}" method="post">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Enter your name..." required>
+                <input type="text" name="subject" placeholder="Enter your Subject..." required>
+                <input type="email" name="semail" placeholder="Enter your email..." required>
+                <input type="email" name="remail" placeholder="Enter receiver email.." required>
+                <input type="file" name="image" id="" dataformatas="pdf,jpg,png" required>
+                <input type="submit" id="submit" value="Submit">
+            </form>
+        </main>
+    <p>Design and Built by <a href="https://amantiwari83.github.io/Portfolio/" target="_blank">Aman Tiwari</a></p>
+    </body>
+</html>    
